@@ -6,7 +6,7 @@ const cors = require('cors');
 
 app.use(cors());
 
-const getImages = require('./routes/routes.js');
+const getImages = require('./routes/image.js');
 
 app.use('/api', getImages);
 
