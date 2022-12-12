@@ -1,5 +1,4 @@
 import './home.css'
-import Form from '../../components/form/Form'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 
@@ -12,7 +11,6 @@ export default function Home() {
 
   return (
     <div className='home'>
-        <Form />
         <div className="home_content">
             {error ? 'Erreur innatendue' : isLoading ? 'Chargement' :  data.map(image => (
                 <div className="home_image" key={image.id}>

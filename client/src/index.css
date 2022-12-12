@@ -3,3 +3,28 @@
   margin: 0;
   padding: 0;
 }
+
+:root{
+  --primary-color: #4a7a54;
+  --secondary-color: #ffc700;
+  --tertiary-color: #b0f2b6;
+  --txt-color: #fff;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--txt-color);
+}
+
+a:visited{
+  color: var(--txt-color);
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}

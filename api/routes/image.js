@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const image = require('../controllers/image.js');
+const ctrl = require('../controllers/image.js');
 
-router.get('/images', image.getAllImages);
-router.post('/image', image.createImage);
+router.get('/images', ctrl.getAllImages);
+router.post('/image', ctrl.createImage);
 
 module.exports = router;
