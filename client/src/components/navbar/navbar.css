@@ -22,25 +22,22 @@
 .navbar_menu .liste{
     display: flex;
     gap: 20px;
+    font-size: 1.1rem;
 }
 
 .navbar_menu .liste a:hover{
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 .navbar_btn{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: var(--txt-color);
     font-size: 1.2rem;
-    /* padding: 10px;
-    border-radius: 10px;
-    box-shadow: inset -2px -2px 5px #273029,
-    inset 2px 2px 5px #233928; */
     background-color: var(--primary-color);
 }
 
 .navbar_btn:hover{
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }

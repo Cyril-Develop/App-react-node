@@ -7,18 +7,16 @@ export default function UploadImg({setModal}) {
 	return (
 		<div className='modal_upload'>
 			<div className="upload_content">
-				<div className="upload_header">
-					<button 
-						className='modal_header_close'
-						aria-label='Fermer la modal' 
-						type='button' 
-						onClick={() => setModal(false)}>
-						<CloseIcon/>
-					</button>
-				</div>
+				<button 
+					className='modal_header_close'
+					aria-label='Fermer la modal' 
+					type='button' 
+					onClick={() => setModal(false)}>
+					<CloseIcon/>
+				</button>	
 				<form className='upload_form'>
-					<h3>Choisissez un thème :</h3>
-					<div className="form_group">
+					<fieldset className="form_group">
+						<legend>Choisissez un thème :</legend>
 						<div className='form_group_radio'>
 							<input type="radio" name='theme' id='paysage' style={{display: 'none'}}/>
 							<label htmlFor="paysage">Paysage</label>
@@ -31,7 +29,7 @@ export default function UploadImg({setModal}) {
 							<input type="radio" name='theme' id='autre' style={{display: 'none'}}/>
 							<label htmlFor="autre">Autre</label>
 						</div>
-					</div>
+					</fieldset>
 					<div className="form_group">
 						<label htmlFor="urlExtern">URL de l'image :</label>
 						<input type="text" id='urlExtern' />
