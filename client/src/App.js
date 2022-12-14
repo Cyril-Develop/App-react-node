@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Home from "./pages/home/Home";
+import Home from "./pages/themes/Home";
 import Navbar from "./components/navbar/Navbar";
-import Paysage from "./pages/themes/paysage/Paysage";
-import Portrait from "./pages/themes/portrait/Portrait";
-import Autre from "./pages/themes/autre/Autre";
+import Paysage from "./pages/themes/Paysage";
+import Portrait from "./pages/themes/Portrait";
+import Autre from "./pages/themes/Autre";
 
 export default function App() {
 
