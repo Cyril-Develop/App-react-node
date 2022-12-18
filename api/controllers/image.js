@@ -33,5 +33,5 @@ exports.getImagesAutre = (req, res) => {
 };
 
 exports.createImage = (req, res) => {
-    res.send('Image created !');
+    console.log('req.file', req.file);
 };

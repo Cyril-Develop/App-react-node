@@ -2,13 +2,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+app.use(cors());
 //app.use(express.json());
 
-app.use(cors());
+const imagesRoutes = require('./routes/image.js');
 
-const getImages = require('./routes/image.js');
-
-app.use('/api', getImages);
+app.use('/api', imagesRoutes);
 
 require('./db/mysql.js');
 
