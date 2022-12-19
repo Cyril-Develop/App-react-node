@@ -9,6 +9,7 @@ const imagesRoutes = require('./routes/image.js');
 
 app.use('/api', imagesRoutes);
 
+
 require('./db/mysql.js');
 
 app.listen(8080, () => {

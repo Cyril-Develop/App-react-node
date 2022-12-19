@@ -6,7 +6,7 @@
 
 .gallery_content{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 400px);
     grid-gap: 20px;
     max-width: 70%;
