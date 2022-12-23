@@ -1,6 +1,4 @@
 const database = require('../db/mysql.js');
-const sharp = require('sharp');
-const fs = require('fs');
 
 exports.getAllImages = (req, res) => {
     database.query('SELECT * FROM images', (error, result) => {
@@ -35,27 +33,9 @@ exports.getImagesAutre = (req, res) => {
 };
 
 exports.createImage = (req, res) => {
-    if(req.file){
-        const filename = req.file.originalname.split('.')[0] + Date.now() + '.jpg';
-        try{
-            fs.access('../client/public/imgUpload', (err) => {
-                if (err) {
-                    console.log('Le dossier n\'existe pas');
-                    fs.mkdirSync('../client/public/imgUpload');
-                }
-            });
-            sharp(req.file.buffer)
-            .resize({width: 300})
-            .toFormat('jpeg')
-            .jpeg({quality: 90})
-            .toFile(`../client/public/imgUpload/${filename}`)
-        } catch (error) {
-            res.status(400).json({error});
-        }
-    }
     const image = {
         categorie : req.body.categorie,
-        imageUrl : req.file ? `http://localhost:3000/imgUpload/${filename}` : req.body.image
+        imageUrl : req.body.image
     }
         database.query('INSERT INTO images SET ?', image, (error, result) => {
             if (error) return res.status(500).json(error)

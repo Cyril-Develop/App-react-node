@@ -13,7 +13,11 @@ export default function Portrait() {
 	return (
 		<main className='theme'>
 			<div className="theme_content">
-                {error ? 'Erreur innatendue' : isLoading ? 'Chargement' :  <Gallery data={data}/>}
+                {error ? 
+                'Erreur innatendue' : 
+                isLoading ? 
+                'Chargement' :  
+                <Gallery data={data}/>}
 			</div>
 		</main>
 	)
